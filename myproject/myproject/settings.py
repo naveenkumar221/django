@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-zdi#ti0ud=_i_hxa#%3=#s8y%8%qi(v31p!bejktjrxk#-=l*n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['django-3-stl6.onrender.com']
 
 
 # Application definition
