@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse 
 from django.http import JsonResponse
+from django.db import connection
 # Create your views here.
 
 def sample(requst):
@@ -31,5 +32,18 @@ def calculate(requst):
        division:  {division} """
     
     return HttpResponse(result)
+
+
+
+# to testing database connection 
+def health(reuest):
+    try:
+        with connection.cursor() as c:
+            c.execute("SELECT 1")
+        return JsonResponse({"status":"ok","db":"connected"})
+    except Exception as e:
+        return JsonResponse({"status":"error","db":str(e)})
+
+
 
     

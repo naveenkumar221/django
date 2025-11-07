@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-zdi#ti0ud=_i_hxa#%3=#s8y%8%qi(v31p!bejktjrxk#-=l*n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['django-3-stl6.onrender.com']
+ALLOWED_HOSTS = ['django-3-stl6.onrender.com','127.0.0.1']
 
 
 # Application definition
@@ -75,8 +75,16 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': "53rand54r",
+        'USER':'root',
+        'PASSWORD':'Naveenkumar@4221',
+        'HOST':"127.0.0.1",
+        'PORT':"3306",
+        "OPTIONS":{
+            'charset':'utf8mb4',
+            'init_command':"SET sql_mode='STRICT_TRANS_TABLES'"
+        }
     }
 }
 
